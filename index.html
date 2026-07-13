@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walmart Associates | Corporate Culture & Employee Development Center</title>
+  <meta name="description" content="Explore Walmart's corporate culture and employee career development programs. Learn about Live Better U 100% tuition coverage, Walmart Academy, and pathways to leadership.">
+  <meta name="theme-color" content="#030f1e">
+  <!-- Data URI Favicon representing the Walmart Spark -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cg transform='translate(25, 25)'%3E%3Crect x='-4' y='-22' width='8' height='15' rx='4' fill='%23ffc220'/%3E%3Crect x='-4' y='-22' width='8' height='15' rx='4' fill='%23ffc220' transform='rotate(60)'/%3E%3Crect x='-4' y='-22' width='8' height='15' rx='4' fill='%23ffc220' transform='rotate(120)'/%3E%3Crect x='-4' y='-22' width='8' height='15' rx='4' fill='%23ffc220' transform='rotate(180)'/%3E%3Crect x='-4' y='-22' width='8' height='15' rx='4' fill='%23ffc220' transform='rotate(240)'/%3E%3Crect x='-4' y='-22' width='8' height='15' rx='4' fill='%23ffc220' transform='rotate(300)'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #030f1e;
+      --bg-soft: #07192c;
+      --surface: rgba(10, 30, 52, 0.72);
+      --surface-strong: rgba(7, 21, 37, 0.92);
+      --card: rgba(13, 38, 64, 0.85);
+      --line: rgba(136, 187, 210, 0.22);
+      --text: #ebf8ff;
+      --muted: #aac7d8;
+      --primary: #00b8d9;
+      --primary-2: #1ac4a2;
+      --accent: #ffc220;
+      --accent-glow: rgba(255, 194, 32, 0.3);
+      --danger: #ff6767;
+      --radius: 18px;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 90% 10%, rgba(0, 113, 206, 0.22), transparent 35%),
+        radial-gradient(circle at 8% 25%, rgba(255, 194, 32, 0.14), transparent 30%),
+        linear-gradient(160deg, #030f1e 0%, #06192c 45%, #030d17 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-bg::before,
+    .site-bg::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .site-bg::before {
+      width: 360px;
+      height: 360px;
+      background: #0071ce;
+      top: -90px;
+      right: -90px;
+      animation: floatBlob 12s ease-in-out infinite;
+    }
+
+    .site-bg::after {
+      width: 260px;
+      height: 260px;
+      background: #ffc220;
+      bottom: -40px;
+      left: -40px;
+      animation: floatBlob 16s ease-in-out infinite reverse;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(4, 14, 23, 0.72);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .header.scrolled {
+      border-color: var(--line);
+      background: rgba(3, 15, 30, 0.88);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 13px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand svg {
+      width: 210px;
+      height: auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.22s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: transparent;
+      color: var(--text);
+      font-size: 1.35rem;
+      cursor: pointer;
+    }
+
+    .nav-shell {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 999px;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      padding: 11px 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #030f1e;
+      background: linear-gradient(120deg, #ffc220 0%, #ffdf7a 100%);
+      box-shadow: 0 10px 22px rgba(255, 194, 32, 0.26);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      box-shadow: 0 16px 26px rgba(255, 194, 32, 0.35);
+    }
+
+    .btn-ghost {
+      color: #d8efff;
+      border: 1px solid rgba(181, 221, 243, 0.35);
+      background: rgba(13, 35, 51, 0.65);
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      background: rgba(18, 47, 68, 0.95);
+    }
+
+    .hero {
+      padding: 78px 0 66px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(122, 202, 220, 0.45);
+      color: #c5ecff;
+      background: rgba(9, 37, 55, 0.78);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .hero h1 {
+      margin: 18px 0 14px;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: clamp(2rem, 4.9vw, 3.55rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, #ffc220 0%, #31e1ff 60%, #1cc8a5 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 61ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .metrics {
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metrics li {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px 12px;
+      background: rgba(15, 36, 53, 0.55);
+    }
+
+    .metrics strong {
+      display: block;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: 1.24rem;
+      color: #ffc220;
+      line-height: 1.2;
+    }
+
+    .metrics span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-side {
+      background: linear-gradient(180deg, rgba(12, 39, 58, 0.94) 0%, rgba(8, 26, 41, 0.95) 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-side h2 {
+      margin: 0;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: 1.32rem;
+    }
+
+    .hero-side p {
+      margin: 0;
+      font-size: 0.96rem;
+      color: #cbe0ec;
+    }
+
+    .checks {
+      margin: 2px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .checks li {
+      position: relative;
+      padding-left: 26px;
+      color: #d7edfa;
+      font-size: 0.93rem;
+    }
+
+    .checks li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(130deg, #ffc220, #0071ce);
+      box-shadow: 0 0 0 3px rgba(255, 194, 32, 0.2);
+    }
+
+    .quick-panel {
+      border: 1px solid rgba(196, 230, 245, 0.16);
+      border-radius: 14px;
+      padding: 13px;
+      background: rgba(10, 27, 41, 0.65);
+    }
+
+    .quick-panel strong {
+      display: block;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      margin-bottom: 5px;
+    }
+
+    .quick-panel a {
+      color: #ffc220;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-header {
+      margin-bottom: 26px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: clamp(1.7rem, 3.2vw, 2.45rem);
+      letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      background: linear-gradient(150deg, rgba(20, 47, 69, 0.9), rgba(11, 30, 45, 0.92));
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .service-card {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .service-card h3 {
+      margin: 2px 0 8px;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: 1.18rem;
+    }
+
+    .service-card p {
+      margin: 0 0 12px;
+      color: #cbe0ec;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .service-card a {
+      display: inline-flex;
+      color: #ffc220;
+      font-weight: 700;
+      font-size: 0.93rem;
+      transition: color 0.2s ease;
+    }
+
+    .service-card a:hover {
+      color: #fff;
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .step-card {
+      position: relative;
+    }
+
+    .step-index {
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      color: #ffc220;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+      font-weight: 700;
+    }
+
+    .step-card h4 {
+      margin: 0 0 8px;
+      font-family: "Sora", "Segoe UI", sans-serif;
+    }
+
+    .step-card p {
+      margin: 0;
+      color: #c2d8e6;
+      font-size: 0.92rem;
+    }
+
+    .highlight-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .showcase {
+      display: grid;
+      gap: 12px;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .case {
+      border: 1px solid rgba(170, 217, 238, 0.22);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(11, 30, 45, 0.65);
+    }
+
+    .case strong {
+      display: block;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      margin-bottom: 6px;
+    }
+
+    .case p {
+      margin: 0;
+      color: #c2d8e6;
+      font-size: 0.9rem;
+    }
+
+    .case em {
+      display: block;
+      margin-top: 8px;
+      color: #31e1ff;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .stack-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 9px;
+    }
+
+    .stack-list li {
+      border: 1px dashed rgba(159, 206, 226, 0.3);
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #d2e9f4;
+    }
+
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .insight-card h4 {
+      margin: 0 0 9px;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: 1.05rem;
+      color: #ffc220;
+    }
+
+    .insight-card p {
+      margin: 0;
+      color: #c7ddeb;
+      font-size: 0.93rem;
+    }
+
+    .cta-strip {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(166, 219, 239, 0.3);
+      border-radius: 24px;
+      padding: 34px;
+      background:
+        radial-gradient(circle at 95% 10%, rgba(255, 194, 32, 0.2), transparent 40%),
+        linear-gradient(140deg, rgba(11, 37, 56, 0.95), rgba(8, 23, 36, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .cta-strip h3 {
+      margin: 0 0 10px;
+      font-family: "Sora", "Segoe UI", sans-serif;
+      font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+    }
+
+    .cta-strip p {
+      margin: 0;
+      color: #c5dceb;
+      max-width: 70ch;
+    }
+
+    .cta-strip .hero-actions {
+      margin-top: 22px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 16px;
+    }
+
+    .contact-item {
+      margin: 0 0 12px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9acadd;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      font-size: 1rem;
+      color: #e4f4ff;
+    }
+
+    .contact-item a {
+      font-weight: 700;
+    }
+
+    /* Modern Form Fields */
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(4, 14, 23, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #ffc220;
+      box-shadow: 0 0 0 3px rgba(255, 194, 32, 0.15);
+    }
+
+    textarea.form-control {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .map-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 230px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      border: 0;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(140, 191, 214, 0.24);
+      margin-top: 54px;
+      padding: 18px 0 26px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer small {
+      color: #9dbed0;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: #c6e3f2;
+      font-size: 0.91rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffc220;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Modal Overlay Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      background: rgba(3, 10, 20, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-container {
+      width: min(760px, 90vw);
+      max-height: 80vh;
+      background: linear-gradient(150deg, #07192c 0%, #030d17 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 36px;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--shadow);
+      transform: scale(0.92);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.open .modal-container {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .modal-close:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .modal-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 1.6rem;
+      color: #ffc220;
+    }
+
+    .modal-body {
+      color: #cbe0ec;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .modal-body p {
+      margin: 0 0 16px;
+    }
+
+    .modal-body h3 {
+      color: #ebf8ff;
+      font-size: 1.15rem;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-family: "Sora", sans-serif;
+    }
+
+    .modal-body ul {
+      margin: 0 0 16px;
+      padding-left: 20px;
+    }
+
+    .modal-body li {
+      margin-bottom: 6px;
+    }
+
+    @keyframes floatBlob {
+      0%,
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(18px) translateX(10px);
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .hero-layout,
+      .highlight-wrap,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pipeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .insight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .brand svg {
+        width: 188px;
+      }
+
+      .nav-shell {
+        position: fixed;
+        top: 68px;
+        right: 4vw;
+        left: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(5, 20, 32, 0.96);
+        padding: 24px 18px;
+        transform: translateY(-14px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.22s ease, transform 0.22s ease;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-shell.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .nav-actions {
+        margin-top: 16px;
+        width: 100%;
+      }
+      
+      .nav-actions .btn {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .service-grid,
+      .case-grid,
+      .insight-grid,
+      .metrics,
+      .pipeline {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(1120px, 94vw);
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .cta-strip {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Go to homepage">
+        <!-- Inline Vector Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="210" height="50">
+          <text x="5" y="32" font-family="'Sora', 'Segoe UI', sans-serif" font-size="20" font-weight="800" fill="#ebf8ff">Walmart</text>
+          <text x="96" y="32" font-family="'Sora', 'Segoe UI', sans-serif" font-size="20" font-weight="500" fill="#00b8d9">Associates</text>
+        </svg>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+      <div class="nav-shell">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#programs">Programs</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#results">Impact</a>
+          <a href="#insights">Insights</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="#contact">Corporate Info</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="reveal">
+          <span class="eyebrow">Day One Education Benefits • Promoting From Within</span>
+          <h1>Launch Your Future, <span class="gradient-text">Funded From Day 1</span></h1>
+          <p>
+            Walmart is more than a workplace—it is a launchpad. Through our Live Better U education benefits, 
+            hands-on leadership training at Walmart Academy, and clear pathways to specialized high-demand fields, 
+            we invest in you so you can build a lifetime career.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Contact Hub</a>
+            <a class="btn btn-ghost" href="#programs">Explore Programs</a>
+          </div>
+
+          <ul class="metrics">
+            <li>
+              <strong>75%</strong>
+              <span>Of Store Managers started as hourly associates</span>
+            </li>
+            <li>
+              <strong>100%</strong>
+              <span>Tuition & book costs covered by Walmart</span>
+            </li>
+            <li>
+              <strong>3M+</strong>
+              <span>Annual training hours at Walmart Academy</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-side reveal">
+          <h2>Grow Without Limits.</h2>
+          <p>From the storefront to corporate suites, we close the gap between entry-level roles and executive opportunities.</p>
+          <ul class="checks">
+            <li>Complete tuition coverage starting on your first day</li>
+            <li>Hands-on business management and technology classes</li>
+            <li>Personalized coaching to balance work and learning</li>
+            <li>Accelerated paths to high-paying specialized roles</li>
+          </ul>
+
+          <div class="quick-panel">
+            <strong>Program Inquiries</strong>
+            <a href="mailto:pathways@walmart-culture-hub.cc">pathways@walmart-culture-hub.cc</a>
+          </div>
+          <div class="quick-panel">
+            <strong>Headquarters Location</strong>
+            <span>1 Customer Dr, Bentonville, AR 72716-0555, USA</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Development Programs</h2>
+          <p class="section-subtitle">We back our associates with industry-leading training, structured pipelines, and debt-free educational offerings.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="card service-card reveal">
+            <!-- Inline Vector LBU Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <defs>
+                <linearGradient id="grad-lbu" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#31e1ff" />
+                  <stop offset="100%" stop-color="#1cc8a5" />
+                </linearGradient>
+              </defs>
+              <path d="M24 6L6 15L24 24L42 15L24 6Z" stroke="url(#grad-lbu)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 21V33C12 36.3137 17.3726 39 24 39C30.6274 39 36 36.3137 36 33V21" stroke="url(#grad-lbu)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M38 17.5V27.5" stroke="url(#grad-lbu)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="24" cy="15" r="2" fill="#ffc220" />
+            </svg>
+            <div>
+              <h3>Live Better U (LBU)</h3>
+              <p>
+                Earn your degree or professional certificate debt-free. We pay 100% of college tuition, books, 
+                and fees starting on day one. Choose from high-demand programs in cybersecurity, tech, business management, and supply chain.
+              </p>
+              <a href="#contact">Contact to Apply &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card service-card reveal">
+            <!-- Inline Vector Academy Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <defs>
+                <linearGradient id="grad-academy" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffb049" />
+                  <stop offset="100%" stop-color="#ff6767" />
+                </linearGradient>
+              </defs>
+              <path d="M6 36V10C6 7.79086 7.79086 6 10 6H24V38H10C7.79086 38 6 36.2091 6 36Z" stroke="url(#grad-academy)" stroke-width="3" stroke-linejoin="round" />
+              <path d="M42 36V10C42 7.79086 40.2091 6 38 6H24V38H38C40.2091 38 42 36.2091 42 36Z" stroke="url(#grad-academy)" stroke-width="3" stroke-linejoin="round" />
+              <path d="M12 12H18" stroke="url(#grad-academy)" stroke-width="3" stroke-linecap="round" />
+              <path d="M12 20H18" stroke="url(#grad-academy)" stroke-width="3" stroke-linecap="round" />
+              <path d="M30 12H36" stroke="url(#grad-academy)" stroke-width="3" stroke-linecap="round" />
+              <path d="M30 20H36" stroke="url(#grad-academy)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="24" cy="32" r="5" stroke="#ffc220" stroke-width="3" />
+            </svg>
+            <div>
+              <h3>Walmart Academy</h3>
+              <p>
+                Our central network of training facilities equips associates with operational expertise, 
+                advanced leadership skills, and hands-on digital tools. Acquire practical corporate experience to step confidently into store leadership.
+              </p>
+              <a href="#contact">Contact for Academy &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card service-card reveal">
+            <!-- Inline Vector Pathways Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <defs>
+                <linearGradient id="grad-pathways" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#31e1ff" />
+                  <stop offset="100%" stop-color="#ffb049" />
+                </linearGradient>
+              </defs>
+              <path d="M8 40H40V8" stroke="url(#grad-pathways)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 32L22 22L30 28L40 14" stroke="url(#grad-pathways)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M32 14H40V22" stroke="url(#grad-pathways)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div>
+              <h3>AI Career Explorer</h3>
+              <p>
+                Map your path using interactive tools that match your personal interests, operational strengths, 
+                and long-term goals with more than 200+ distinct careers across Walmart's corporate and retail divisions.
+              </p>
+              <a href="#contact">Corporate Info &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card service-card reveal">
+            <!-- Inline Vector Culture Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+              <defs>
+                <linearGradient id="grad-culture" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1cc8a5" />
+                  <stop offset="100%" stop-color="#ffc369" />
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="14" r="6" stroke="url(#grad-culture)" stroke-width="3" />
+              <path d="M12 36C12 29.3726 17.3726 24 24 24C30.6274 24 36 29.3726 36 36" stroke="url(#grad-culture)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="10" cy="18" r="4" stroke="url(#grad-culture)" stroke-width="2.5" />
+              <path d="M2 38C2 33.5817 5.58172 30 10 30" stroke="url(#grad-culture)" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="38" cy="18" r="4" stroke="url(#grad-culture)" stroke-width="2.5" />
+              <path d="M46 38C46 33.5817 42.4183 30 38 30" stroke="url(#grad-culture)" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+            <div>
+              <h3>Associate-to-Role Pathways</h3>
+              <p>
+                Fast-track your transition into technical and specialty roles. We provide sponsored, structured pipelines to 
+                certify you as a commercial truck driver (CDL), pharmacy technician, or licensed optician.
+              </p>
+              <a href="#contact">Inquire Details &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Pipeline Section -->
+    <section class="section" id="workflow">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">The Career Journey</h2>
+          <p class="section-subtitle">How we support your progression from your first shift to senior leadership roles.</p>
+        </div>
+
+        <div class="pipeline">
+          <article class="card step-card reveal">
+            <div class="step-index">Step 01</div>
+            <h4>Join & Unlock</h4>
+            <p>Start your role in one of our retail, distribution, or tech locations and instantly unlock LBU learning options.</p>
+          </article>
+
+          <article class="card step-card reveal">
+            <div class="step-index">Step 02</div>
+            <h4>Train at Academy</h4>
+            <p>Gain hands-on management skills and master modern retail tools during academy instruction modules.</p>
+          </article>
+
+          <article class="card step-card reveal">
+            <div class="step-index">Step 03</div>
+            <h4>Earn Your Degree</h4>
+            <p>Study online or hybrid through top-tier universities, 100% funded with no out-of-pocket costs.</p>
+          </article>
+
+          <article class="card step-card reveal">
+            <div class="step-index">Step 04</div>
+            <h4>Step Into Leadership</h4>
+            <p>Advance into store, logistics, or corporate leadership—joining the 75% of managers promoted from within.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase / Impact Section -->
+    <section class="section" id="results">
+      <div class="container highlight-wrap">
+        <div class="card showcase reveal">
+          <div class="section-header">
+            <h2 class="section-title">Success Profiles</h2>
+          </div>
+          <div class="case-grid">
+            <article class="case">
+              <strong>Hourly Cashier to Store Manager</strong>
+              <p>Leveraged local academy training and leadership courses to rise from hourly shift checkout to running a full-scale supercenter.</p>
+              <em>Promoted to Salaried Management</em>
+            </article>
+            <article class="case">
+              <strong>Supply Chain to Corporate Tech</strong>
+              <p>Studied Cybersecurity BS through LBU while working in warehouse logistics. Transitioned to the Global Tech security department.</p>
+              <em>Transitioned to Corporate Cyber Team</em>
+            </article>
+            <article class="case">
+              <strong>Store Associate to CDL Driver</strong>
+              <p>Used the Associate-to-Role academy pipeline to get certified as a professional fleet truck driver, earning higher pay.</p>
+              <em>Transitioned to Private Fleet</em>
+            </article>
+            <article class="case">
+              <strong>Service Desk to Pharmacy Tech</strong>
+              <p>Completed pharmacy technician certification programs fully funded, transitioning from front desk to health and wellness clinics.</p>
+              <em>Certified Pharmacy Professional</em>
+            </article>
+          </div>
+        </div>
+
+        <aside class="card reveal">
+          <h3 style="margin-top:0; font-family:'Sora','Segoe UI',sans-serif; color: #ffc220;">Pathways Blueprint</h3>
+          <ul class="stack-list">
+            <li>100% paid tuition, books, and registration fees</li>
+            <li>Accredited online and hybrid university systems</li>
+            <li>Direct mentorship from seasoned store leaders</li>
+            <li>Specialized certification and licensing tracks</li>
+            <li>1-on-1 career coaching from Guild advisers</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:16px;">
+            <a class="btn btn-primary" href="#contact">Corporate Office</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="section" id="insights">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Cultural Pillars</h2>
+        </div>
+
+        <div class="insight-grid">
+          <article class="card insight-card reveal">
+            <h4>Internal Mobility first</h4>
+            <p>Our leaders are built here. We prioritize internal development and promotions, ensuring store floor experience guides corporate levels.</p>
+          </article>
+          <article class="card insight-card reveal">
+            <h4>Continuous Skill Building</h4>
+            <p>The landscape of commerce is changing. We continuously build digital capabilities, giving you tech skills that stay relevant.</p>
+          </article>
+          <article class="card insight-card reveal">
+            <h4>Removing Education Barriers</h4>
+            <p>We believe financial situations shouldn't dictate your future. Debt-free education makes higher learning accessible to all.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-strip reveal">
+          <h3>Ready to start building a future with Walmart?</h3>
+          <p>
+            Find corporate offices and contact channels below to learn more about career options and LBU eligibility.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Headquarters Details</a>
+            <a class="btn btn-ghost" href="#programs">Learn More Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Corporate Headquarters &amp; Location</h2>
+        </div>
+
+        <div class="contact-grid">
+          <article class="card reveal" style="display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: 40px;">
+            <p class="contact-item" style="margin: 0;">
+              <strong>Corporate Office</strong>
+              <span style="font-size: 1.35rem; font-weight: 800; color: #fff; display: block; margin-top: 4px;">Wal-Mart Associates, Inc.</span>
+            </p>
+            <p class="contact-item" style="margin: 0;">
+              <strong>Career Hub Email</strong>
+              <a href="mailto:pathways@walmart-culture-hub.cc" style="font-size: 1.15rem; color: #ffc220; display: block; margin-top: 4px; font-weight: 700;">pathways@walmart-culture-hub.cc</a>
+            </p>
+            <p class="contact-item" style="margin: 0;">
+              <strong>Address</strong>
+              <span style="font-size: 1.15rem; color: #e4f4ff; display: block; margin-top: 4px;">1 Customer Dr, Bentonville, AR 72716-0555, USA</span>
+            </p>
+          </article>
+
+          <div class="map-card reveal">
+            <!-- Embedded Google Map centered on 1 Customer Dr, Bentonville -->
+            <iframe
+              title="Walmart Home Office location in Bentonville, Arkansas on Google Maps"
+              src="https://www.google.com/maps?q=1+Customer+Dr,+Bentonville,+AR+72716-0555,+USA&output=embed&hl=en"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Wal-Mart Associates, Inc. All rights reserved.</small>
+      <div class="footer-links">
+        <a href="#" data-modal="privacy-modal">Privacy Policy</a>
+        <a href="#" data-modal="terms-modal">Terms &amp; Conditions</a>
+        <a href="#" data-modal="disclaimer-modal">Disclaimer</a>
+        <a href="mailto:pathways@walmart-culture-hub.cc">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Overlays -->
+  
+  <!-- Privacy Policy Modal -->
+  <div class="modal-overlay" id="privacy-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2>Privacy Policy</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>Effective Date: July 13, 2026</strong></p>
+        <p>At Wal-Mart Associates, Inc., we value and respect your privacy. This Privacy Policy describes how we collect, use, and safeguard the information you provide when using our landing page and submitting career inquiries.</p>
+        
+        <h3>1. Information We Collect</h3>
+        <p>When you submit an inquiry form on our landing page, we collect the personal information you choose to provide, which includes:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Your email address</li>
+          <li>Your program of interest</li>
+          <li>Your written career goals</li>
+        </ul>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>The information we collect is used solely to:</p>
+        <ul>
+          <li>Evaluate your training interest and direct you to the appropriate career pathway advisers.</li>
+          <li>Respond directly to the questions or support inquiries you submit.</li>
+          <li>Improve our informational resources and user experience on this landing page.</li>
+        </ul>
+
+        <h3>3. Data Sharing &amp; Third Parties</h3>
+        <p>We do not sell, rent, or trade your personal information to third parties. We may share details internally or with accredited educational partners (such as LBU program facilitators) strictly to process your development inquiry.</p>
+
+        <h3>4. Security</h3>
+        <p>We employ administrative, technical, and physical security measures designed to protect your personal information from unauthorized access, loss, alteration, or disclosure.</p>
+
+        <h3>5. Contact Us</h3>
+        <p>If you have any questions or concerns regarding our privacy practices, please contact us at <a href="mailto:pathways@walmart-culture-hub.cc" style="color: #ffc220; font-weight: 600;">pathways@walmart-culture-hub.cc</a> or at our corporate office: Wal-Mart Associates, Inc., 1 Customer Dr, Bentonville, AR 72716-0555, USA.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions Modal -->
+  <div class="modal-overlay" id="terms-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2>Terms &amp; Conditions</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>Last Updated: July 13, 2026</strong></p>
+        <p>Please read these Terms &amp; Conditions carefully before using the Walmart Pathways website.</p>
+
+        <h3>1. Agreement to Terms</h3>
+        <p>By accessing or utilizing our single-page landing site, you agree to comply with and be bound by these Terms &amp; Conditions. If you do not agree to these terms, please do not use this site.</p>
+
+        <h3>2. Informational Purposes Only</h3>
+        <p>The content provided on this website is for general informational purposes only. It is designed to summarize details about career opportunities, the Live Better U program, and academy training structures. Enrollment, eligibility, and program terms are governed by official Wal-Mart Associates, Inc. employee policy documents and are subject to change.</p>
+
+        <h3>3. Intellectual Property</h3>
+        <p>All logos, trademarks (including "Walmart", the Spark logo, and "Live Better U"), graphics, designs, and content featured on this site are the intellectual property of their respective owners. Use of this landing page does not grant you any license or right to utilize these trademarks without prior written authorization from Wal-Mart Associates, Inc. or respective trademark owners.</p>
+
+        <h3>4. User Submissions</h3>
+        <p>By submitting information via our inquiry form, you warrant that the details provided are accurate and that your submission does not violate any third-party rights. You agree not to submit offensive, defamatory, or unlawful content.</p>
+
+        <h3>5. Limitation of Liability</h3>
+        <p>In no event shall the operators of this website be liable for any damages, losses, or liabilities arising out of your access to or inability to use this website, or reliance upon the informational content provided herein.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Modal -->
+  <div class="modal-overlay" id="disclaimer-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2>Disclaimer</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>General Disclaimer</strong></p>
+        <p>The information provided on this landing page is for educational, illustrative, and showcase purposes only. This website is a mock landing page designed to demonstrate corporate culture highlights and employee development initiatives. It is not an official corporate platform operated by Wal-Mart Associates, Inc., Walmart Inc., Sam's Club, or any of their parent, subsidiary, or affiliate entities.</p>
+        
+        <h3>Program Eligibility &amp; Policy</h3>
+        <p>Official policies regarding Live Better U (LBU), tuition coverage, training academies, and promotion metrics are managed exclusively by corporate human resources and benefit coordinators. Actual benefits, course offerings, and policy rules can vary by region, employment type, tenure, and store status, and are subject to change or termination without notice.</p>
+        
+        <h3>Trademarks</h3>
+        <p>All brand names, trademarks, product names, logos, and service marks mentioned on this website (including "Walmart", "Sam's Club", "Live Better U", and "Walmart Academy") belong to their respective owners. Their mention on this page does not imply sponsorship, affiliation, endorsement, or approval by the trademark holders.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navShell = document.querySelector('.nav-shell');
+    const header = document.querySelector('.header');
+
+    // Mobile navigation menu toggle
+    if (menuToggle && navShell) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navShell.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navShell.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navShell.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!navShell.contains(target) && !menuToggle.contains(target)) {
+          navShell.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Sticky header toggle on scroll
+    window.addEventListener('scroll', () => {
+      if (!header) return;
+
+      if (window.scrollY > 12) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Intersection Observer for scroll-reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+
+    if (reveals.length > 0) {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -30px 0px',
+        }
+      );
+
+      reveals.forEach((item) => observer.observe(item));
+    }
+
+    // Copyright year auto-update
+    const yearNode = document.querySelector('#year');
+
+    if (yearNode) {
+      yearNode.textContent = String(new Date().getFullYear());
+    }
+
+    // Modal Management for Privacy Policy, Terms & Conditions, and Disclaimer
+    const modalTriggers = document.querySelectorAll('[data-modal]');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+    modalTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = trigger.getAttribute('data-modal');
+        const targetModal = document.getElementById(modalId);
+        if (targetModal) {
+          targetModal.classList.add('open');
+          document.body.classList.add('modal-open');
+        }
+      });
+    });
+
+    modalOverlays.forEach((overlay) => {
+      const closeBtn = overlay.querySelector('.modal-close');
+      const closeModal = () => {
+        overlay.classList.remove('open');
+        // Ensure body scroll lock is only removed if no other modal is currently open
+        const anyOpen = Array.from(modalOverlays).some((m) => m.classList.contains('open'));
+        if (!anyOpen) {
+          document.body.classList.remove('modal-open');
+        }
+      };
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+      }
+
+      // Close when clicking on the dark overlay background itself
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          closeModal();
+        }
+      });
+
+      // Close when pressing Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
